@@ -4,10 +4,12 @@ import com.hackett.advisory.pages.*;
 import com.hackett.core.stepdefs.Hooks;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import static com.hackett.core.stepdefs.Hooks.driver;
+
 
 public class BaseTest {
 
-    protected ChromeDriver driver = Hooks.getDriver();
+//    protected ChromeDriver driver = Hooks.getDriver();
     protected LandingPage landingPage = new LandingPage(driver);
     protected ClientsPage clientsPage = new ClientsPage(driver);
     protected ProgramsPage programsPage = new ProgramsPage(driver);

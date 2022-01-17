@@ -2,13 +2,16 @@ package com.hackett.core.stepdefs;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.BeforeAll;
+import io.cucumber.java.Scenario;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Hooks {
 
     public static ChromeDriver driver;
-
     public static String CHROMEDRIVERPATH = "C:/Users/NMarinSalas/IdeaProjects/all-together-repository/src/main/java/com/hackett/core/resources/chromedriver/chromedriver.exe";
 
     @Before(value = "@UI")
@@ -29,7 +32,8 @@ public class Hooks {
         driver = null;
     }
 
-    public static ChromeDriver getDriver() {
+
+    public static WebDriver getDriver() {
         return driver;
     }
 }
