@@ -11,9 +11,9 @@ pipeline {
                 checkout scm
                 script{
                     bat(/mvn clean/)
-                    bat(/mvn compile/)
-                    bat(/mvn install/)
-                    bat(/mvn package/)
+//                    bat(/mvn compile/)
+//                    bat(/mvn install/)
+//                    bat(/mvn package/)
                 }
 //                script {
 //                    bat("""mvn install:install-file \
@@ -41,7 +41,7 @@ pipeline {
 //                    bat("mvn -DDTP_MIRROR=%DTP_MIRROR%")
 //                    bat("mvn -DEMAIL=%EMAIL%")
 //                    bat("mvn -DPASSWORD=%PASSWORD%")
-                    bat("""mvn surefire:test -DTest=UiRunner -X -DBASE_URL=${BASE_URL} -DDTP_MIRROR=${DTP_MIRROR}""")
+                    bat("""mvn test -DTest=UiRunner""")
                 }
             }
         }

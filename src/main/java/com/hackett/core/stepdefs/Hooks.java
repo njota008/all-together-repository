@@ -9,7 +9,7 @@ public class Hooks {
 
     public static ChromeDriver driver;
 
-    public static String CHROMEDRIVERPATH = "../hackett-automation-testing/src/main/java/com/hackett/core/resources/chromedriver/chromedriver.exe";
+    public static String CHROMEDRIVERPATH = "C:/Users/NMarinSalas/IdeaProjects/all-together-repository/src/main/java/com/hackett/core/resources/chromedriver/chromedriver.exe";
 
     @Before(value = "@UI")
     public void setUp() {
